@@ -1,0 +1,48 @@
+.edgeService {
+    height: 100vh;
+
+    .mainService {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+
+        .serviceHeader {
+
+            h2 {
+                color: $gray;
+            }
+        }
+        .serviceContent {
+            display: flex;
+            max-height: 80%;
+
+            ul {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                li {
+                    padding-right: 40px;
+
+                    p {
+                        padding-top: 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .serviceImage {
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    
+                }
+            }
+        }
+    } 
+}
