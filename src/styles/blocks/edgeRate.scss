@@ -1,0 +1,100 @@
+.edgeRate {
+    height: 100vh;
+
+    .mainRate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        .rateHeader {
+
+            h3 {
+                color:$gray;
+            }
+        }
+
+        .rateContent {
+            display: flex;
+            height: 90%;
+
+            .rateTabs {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 1;
+
+                .rateList {
+                    display: flex;
+
+                    li {
+                        margin-right: 15px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            color: $black;
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .ratePrice {
+                    display: flex;
+
+                    .ratePriceImg {
+                        flex: 1;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .ratePriceContent {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        flex: 1;
+                        margin-left: 20px;
+
+                        .ratePriceContentArrows {
+                            display: flex;
+
+                            div {
+                                margin-right: 10px;
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+            }
+
+            .rateGuarantee {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: stretch;
+                flex-direction: row;
+                align-content: stretch;
+
+                li {
+                    flex: 1;
+                }
+            }
+
+            .rateAbout {
+                flex: 1;
+            }
+        }
+    }
+}
+

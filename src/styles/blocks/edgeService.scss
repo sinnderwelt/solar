@@ -18,11 +18,11 @@
             height: 70%;
 
             @include desktop {
-                height: 75%;
+                height: 88%;
             }
 
-            @include laptop {
-                height: 80%;
+            @include tablets {
+                flex-direction: column;
             }
 
             ul {
@@ -31,21 +31,36 @@
                 flex-direction: column;
                 justify-content: space-between;
 
+                @include tablets {
+                    flex: 2;
+                }
+
                 li {
                     padding-right: 90px;
 
                     @include desktop {
-                        padding-right: 45px;
+                        padding-right: 30px;
                     }
 
                     @include laptop {
                         padding-right: 20px;
                     }
 
+                    @include tablets {
+                        padding-right: 0;
+                    }
+
                     h3 {
+
+                        @include desktop {
+                            font-size: 17px;
+                        }
 
                         @include laptop {
                             font-size: 16px;
+                        }
+                        @include phones {
+                            font-size: 14px;
                         }
                     }
 
@@ -54,7 +69,8 @@
                         font-size: 14px;
 
                         @include desktop {
-                            padding-top: 10px;
+                            padding-top: 8px;
+                            font-size: 12px;
                         }
 
                         @include laptop {
@@ -69,9 +85,18 @@
                 position: relative;
                 overflow: hidden;
 
+                @include phones {
+                    display: none;
+                }
+
                 img {
                     position: absolute;
                     height: 100%;
+
+                    @include tablets {
+                        width: 100%;
+                        padding-top: 15px;
+                    }
                 }
             }
         }
