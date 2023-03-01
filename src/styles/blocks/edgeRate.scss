@@ -9,92 +9,110 @@
 
         .rateHeader {
 
-            h3 {
-                color:$gray;
+            h2 {
+                color: $gray;
             }
         }
 
-        .rateContent {
+        .rateDescription {
             display: flex;
-            height: 90%;
 
-            .rateTabs {
+            ul {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
                 flex: 1;
+                
+                li {
+                    margin-right: 40px;
 
-                .rateList {
-                    display: flex;
+                    &:last-child {
+                        margin-right: 0;
+                    }
 
-                    li {
-                        margin-right: 15px;
+                    a {
+                        font-size: 18px;
+                        color: $black;
 
-                        &:last-child {
-                            margin-right: 0;
-                        }
-
-                        a {
-                            color: $black;
-                            font-size: 18px;
-                            font-weight: 400;
+                        &:hover {
+                            display: table;
+                            border-bottom: 1px solid $black;
+                            line-height: 25px;
                         }
                     }
                 }
+            }
 
-                .ratePrice {
+            .rateGreenTariff {
+                flex: 1;
+
+                h3 {
+                    font-size: 18px;
+                    color: $black;
+                }
+            }
+        }
+
+        .rateAbout {
+            display: flex;
+            height: 525px; // проверить после флекса
+
+            .rateAboutContent {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+
+                .rateAboutContentPrice {
                     display: flex;
+                    flex: 1;
 
-                    .ratePriceImg {
+                    .rateAboutContentPriceImg {
                         flex: 1;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
+                        background-image: url(../assets/images/roof.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
 
-                    .ratePriceContent {
+                    .rateAboutContentPriceText {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         flex: 1;
-                        margin-left: 20px;
+                        margin: 0 40px;
 
-                        .ratePriceContentArrows {
+                        .rateAboutContentPriceTextSale {
+
+                            p {
+                                color: $black;
+                                font-size: 14px;
+                                font-weight: 400;
+                            }  
+                        }
+
+                        .rateAboutContentPriceTextArrow {
                             display: flex;
-
-                            div {
-                                margin-right: 10px;
-
-                                &:last-child {
-                                    margin-right: 0;
-                                }
-                            }
-
                             
+                            .rateAboutContentPriceTextArrowItem {
+                                margin-right: 22px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            }
                         }
                     }
                 }
-            }
 
-            .rateGuarantee {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                align-items: stretch;
-                flex-direction: row;
-                align-content: stretch;
-
-                li {
+                .rateAboutContentGuarantee {
                     flex: 1;
                 }
             }
 
-            .rateAbout {
+            .rateAboutImg {
                 flex: 1;
+                background-image: url(../assets/images/cottage.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                
             }
         }
     }
 }
-
