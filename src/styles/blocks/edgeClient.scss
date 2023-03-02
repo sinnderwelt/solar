@@ -1,0 +1,107 @@
+.edgeClient {
+    height: 1300px;
+
+    .mainClient {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        .clientHeader {
+
+            h2 {
+                color: $gray;
+            }
+        }
+
+        .clientTariff {
+            display: flex;
+
+            .clientTariffHouse {
+                flex: 1;
+
+                .clientTariffHouseImg {
+                    background: url(../assets/images/villa.jpg) no-repeat center;
+                    background-size: cover;
+                    height: 370px;
+                }
+
+                .clientTariffHouseArrow {
+                    display: flex;
+                    justify-content: center;
+
+                    .clientTariffHouseArrowItem {
+                        margin-right: 22px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .clientTariffContent {
+                flex: 1;
+                margin-right: 25px;
+                margin-left: 90px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .clientTariffContentDescription {
+
+                    h3 {
+                        text-transform: none;
+                        margin-bottom: 30px;
+                    }
+
+                    ul {
+
+                        li {
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin-bottom: 15px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .clientTariffContentButton {
+
+                    a {
+                        color: $black;
+                        font-size: 18px;
+                        font-weight: 400;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+        
+        .clientStep {
+            display: flex;
+
+            .clientStepContent {
+                flex: 1;
+
+                .clientStepContentHeader {
+
+                    h2 {
+                        color: $gray;
+                    }
+                }
+            }
+
+            .clientStepImg {
+                flex: 1;
+                height: 700px;
+                background: url(../assets/images/house.png) no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+}
