@@ -87,11 +87,62 @@
 
             .clientStepContent {
                 flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 .clientStepContentHeader {
 
                     h2 {
                         color: $gray;
+                        margin-right: 90px;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 90%;
+                    margin-right: 90px;
+
+                    @include desktop {
+                        height: 85%;
+                        margin-right: 45px;
+                    }
+
+                    @include laptop {
+                        margin-right: 30px;
+                    }
+
+                    li {
+
+                        span {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $gray;
+                        }
+
+                        h3 {
+                            color: $black;
+                            text-transform: none;
+                            margin-bottom: 2px;
+                            margin-top: 10px;
+
+                            @include desktop {
+                                margin-top: 4px;
+                            }
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $black;
+
+                            @include desktop {
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
             }
