@@ -15,10 +15,23 @@
             .footerHeaderTitle {
                 flex: 1;
 
+                @include tablets {
+                    display: flex;
+                    justify-content: center;
+                }
+
                 h2 {
                     color: $white;
                     font-size: 24px;
                     font-weight: 700;
+
+                }
+            }
+
+            .footerHeaderTitleContact {
+                
+                @include tablets {
+                    display: none;
                 }
             }
         }
@@ -26,12 +39,21 @@
         .footerMain {
             display: flex;
 
+            @include tablets {
+                flex-direction: column;
+            }
+
             .footerMainContent {
                 flex: 1;
 
                 form {
                     margin-right: 90px;
                     margin-bottom: 45px;
+
+                    @include tablets {
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
 
                     input {
                         width: 100%;
@@ -47,10 +69,24 @@
                     margin-top: 120px;
                     margin-left: 25px; 
 
+                    @include tablets {
+                        margin-bottom: 50px;
+                        margin-top: 60px;
+                    }
+
+                    @include phones {
+                        margin-top: 55px;
+                        margin-bottom: 15px;
+                    }
+
                     a{
                         color: $white;
-                        font-style: 18px;
+                        font-size: 18px;
                         font-weight: 400;
+
+                        @include tablets {
+                            font-size: 16px;
+                        }
                     }
                 }
 
@@ -66,6 +102,14 @@
                         color: $white;
                         font-size: 18px;
                         font-weight: 400;
+
+                        @include tablets {
+                            font-size: 16px;
+                        }
+
+                        @include phones {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -73,14 +117,34 @@
 
         .footerAbout {
             display: flex;
+            
+            @include tablets {
+                margin-top: 5px;
+            }
 
             .footerAboutContent {
                 flex: 1;
 
                 a {
                     color: $white;
-                    font-style: 14px;
+                    font-size: 14px;
                     font-weight: 400;
+
+                    @include tablets {
+                        font-size: 12px;    
+                    }
+
+                    @include phones {
+                        font-size: 7px;
+                    }
+
+                    img {
+                        max-width: 100%;
+
+                        @include phones {
+                            padding-right: 20px;
+                        }
+                    }
                 }
             }
 
@@ -93,6 +157,10 @@
                     display: flex;
                     margin-right: 20px;
 
+                    @include phones {
+                        margin-right: 10px;
+                    }
+
                     &:last-child {
                         margin-right: 0;
                     }
@@ -101,6 +169,16 @@
                         height: 30px;
                         width: 30px;
                         fill: white;
+
+                        @include tablets {
+                            height: 25px;
+                            width: 25px;
+                        }
+
+                        @include phones {
+                            height: 20px;
+                            width: 20px;
+                        }
                     }
                 }
             }

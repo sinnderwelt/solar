@@ -9,7 +9,7 @@
     }
 }
 @mixin tablets {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         @content;
     }
 }
