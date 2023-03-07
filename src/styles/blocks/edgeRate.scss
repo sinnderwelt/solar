@@ -64,45 +64,95 @@
                     display: flex;
                     flex: 1;
 
-                    .rateAboutContentPriceImg {
+                    .rateAboutContentPriceTabs {
+                        display: flex;
+                        flex: 1;
+
+                        .rateAboutContentPriceImg {
                         flex: 1;
                         background-image: url(../assets/images/roof.jpg);
                         background-repeat: no-repeat;
                         background-size: cover;
-                    }
-
-                    .rateAboutContentPriceText {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        flex: 1;
-                        margin: 0 40px;
-
-                        .rateAboutContentPriceTextSale {
-
-                            p {
-                                color: $black;
-                                font-size: 14px;
-                                font-weight: 400;
-                            }  
                         }
 
-                        .rateAboutContentPriceTextArrow {
+                        .rateAboutContentPriceText {
                             display: flex;
-                            
-                            .rateAboutContentPriceTextArrowItem {
-                                margin-right: 22px;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            flex: 1;
+                            margin: 0 40px;
 
-                            &:last-child {
-                                margin-right: 0;
+                            .rateAboutContentPriceTextSale {
+
+                                p {
+                                    color: $black;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                }  
                             }
+
+                            .rateAboutContentPriceTextArrow {
+                                display: flex;
+                                
+                                .rateAboutContentPriceTextArrowItem {
+                                    margin-right: 22px;
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
                             }
                         }
-                    }
+                    }   
                 }
 
                 .rateAboutContentGuarantee {
                     flex: 1;
+
+                    ul {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-content: space-between;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding-top: 50px;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            order: 1;
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            order: 1;
+                        }
+
+                        li {
+                            flex: 1;
+                            height: 50%;
+                            padding-right: 90px;
+
+                            &:nth-child(n) {
+                                order: 1;
+                            }
+
+                            &:nth-child(2n) {
+                                order: 2;
+                            }
+
+                            h3 {
+                                text-transform: none;
+                            }
+
+                            p {
+                                font-size: 14px;
+                                font-weight: 400;
+                                color:$black;
+                            }
+                        }
+                    }
                 }
             }
 
