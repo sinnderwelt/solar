@@ -46,6 +46,12 @@
             .footerMainContent {
                 flex: 1;
 
+                @include phones {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 form {
                     margin-right: 90px;
                     margin-bottom: 45px;
@@ -77,6 +83,7 @@
                     @include phones {
                         margin-top: 55px;
                         margin-bottom: 15px;
+                        margin-left: 0;
                     }
 
                     a{
@@ -122,8 +129,17 @@
                 margin-top: 5px;
             }
 
+            @include phones {
+                flex-direction: column;
+            }
+
             .footerAboutContent {
                 flex: 1;
+
+                @include phones {
+                    display: flex;
+                    justify-content: center;
+                }
 
                 a {
                     color: $white;
@@ -134,16 +150,8 @@
                         font-size: 12px;    
                     }
 
-                    @include phones {
-                        font-size: 7px;
-                    }
-
                     img {
                         max-width: 100%;
-
-                        @include phones {
-                            padding-right: 20px;
-                        }
                     }
                 }
             }
@@ -173,11 +181,6 @@
                         @include tablets {
                             height: 25px;
                             width: 25px;
-                        }
-
-                        @include phones {
-                            height: 20px;
-                            width: 20px;
                         }
                     }
                 }
