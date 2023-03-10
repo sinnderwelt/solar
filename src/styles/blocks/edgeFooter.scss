@@ -52,6 +52,13 @@
                     align-items: center;
                 }
 
+                li {
+
+                    @include phones {
+                        text-align: center;
+                    }
+                }
+
                 form {
                     margin-right: 90px;
                     margin-bottom: 45px;
@@ -78,6 +85,7 @@
                     @include tablets {
                         margin-bottom: 50px;
                         margin-top: 60px;
+                        text-align: center;
                     }
 
                     @include phones {

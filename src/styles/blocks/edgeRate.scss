@@ -1,11 +1,19 @@
 .edgeRate {
     height: 100vh;
 
+    @include tablets {
+        height: 85%;
+    }
+
     .mainRate {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 100%;
+
+        @include tablets {
+            height: 85%;
+        }
 
         .rateHeader {
 
@@ -17,12 +25,8 @@
         .rateDescription {
             display: flex;
 
-            @include phones {
-                flex-direction: column;
-            }
-
             @include tablets {
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
 
             ul {
@@ -31,6 +35,7 @@
 
                 @include tablets {
                     justify-content: center;
+                    margin: 10px 0;
                 }
                 
                 li {
@@ -68,13 +73,13 @@
                     font-size: 18px;
                     color: $black;
 
+                    @include tablets {
+                        margin-top: 10px;
+                    }
+
                     @include phones {
                         font-size: 14px;
                         margin-bottom: 25px;
-                    }
-
-                    @include tablets {
-                        margin-top: 55px;
                     }
                 }
             }
@@ -82,7 +87,7 @@
 
         .rateAbout {
             display: flex;
-            height: 525px; // проверить после флекса
+            height: 450px; // проверить после флекса
 
             @include tablets {
                 flex-direction: column;
@@ -98,22 +103,14 @@
                     flex: 1;
 
                     .rateAboutContentPriceTabs {
-                        display: flex;
-                        flex: 1;
+                        display: none;
 
                         .rateAboutContentPriceImg {
-                        flex: 1;
-                        background-image: url(../assets/images/roof.jpg);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-
-                            @include phones {
-                                display: none;
-                            }
-
-                            @include tablets {
-                                display: none;
-                            }
+                            flex: 1;
+                            background-image: url(../assets/images/roof.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-bottom: 10px;
                         }
 
                         .rateAboutContentPriceText {
@@ -139,6 +136,10 @@
                                     color: $black;
                                     font-size: 14px;
                                     font-weight: 400;
+
+                                    @include tablets {
+                                        margin-left: 15px;
+                                    }
                                 }  
                             }
 
@@ -163,6 +164,11 @@
                             }
                         }
                     }   
+
+                    .active {
+                        display: flex;
+                        flex: 1;
+                    }
                 }
 
                 .rateAboutContentGuarantee {
@@ -174,10 +180,10 @@
                         align-content: space-between;
                         justify-content: space-between;
                         height: 100%;
-                        padding-top: 50px;
+                        padding-top: 25px;
 
-                        @include phones {
-                            padding-top: 0;
+                        @include laptop {
+                            padding-top: 25px;
                         }
 
                         @include tablets {
@@ -199,18 +205,20 @@
                         li {
                             flex: 1;
                             height: 50%;
-                            padding-right: 90px;
-
-                            @include phones {
-                                padding-right: 0;
-                                padding-top: 25px;
-                                padding-bottom: 10px;
-                            }
+                            padding-right: 55px;
+                            padding-top: 10px;
 
                             @include tablets {
                                 padding-right: 0;
-                                padding-top: 25px;
-                                padding-bottom: 10px;
+                                
+                                &:nth-child(3), &:nth-child(4) {
+                                    padding-left: 35px;
+                                }
+                                
+                            }
+
+                            @include phones {
+                                padding-right: 0;
                             }
 
                             &:nth-child(n) {

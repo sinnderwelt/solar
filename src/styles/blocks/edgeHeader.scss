@@ -1,6 +1,6 @@
 .edgeHeader {
     height: 100vh;
-    background: url(../assets/images/background.jpg) no-repeat center;
+    background: url(../assets/images/header.png) no-repeat center;
     background-size: cover;
     
     .container {
@@ -42,11 +42,11 @@
                     font-weight: 400;
 
                     @include tablets {
-                        font-size: 16px;
+                        font-size: 22px;
                     }
 
                     @include phones {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
 
@@ -54,8 +54,12 @@
                     color: $white;
                     text-transform: none;
 
+                    @include tablets {
+                        margin: 0 15px;
+                    }
+
                     @include phones {
-                        margin: 10px 0;
+                        margin: 20px 0;
                     }
                 }
 
@@ -126,11 +130,11 @@
                     font-weight: 400;
 
                     @include tablets {
-                        font-size: 16px;
+                        font-size: 22px;
                     }
 
                     @include phones {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -154,13 +158,13 @@
                         fill: white;
 
                         @include tablets {
-                            height: 25px;
-                            width: 25px;
+                            height: 35px;
+                            width: 35px;
                         }
 
                         @include phones {
-                            height: 20px;
-                            width: 20px;
+                            height: 30px;
+                            width: 30px;
                         }
                     }
                 }
