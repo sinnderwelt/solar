@@ -105,12 +105,29 @@
                     .rateAboutContentPriceTabs {
                         display: none;
 
-                        .rateAboutContentPriceImg {
+                        .rateAboutContentPriceImgSystem {
                             flex: 1;
-                            background-image: url(../assets/images/roof.jpg);
+                            background-image: url(../assets/images/system.jpg);
                             background-repeat: no-repeat;
                             background-size: cover;
                             margin-bottom: 10px;
+                        }
+
+                        .rateAboutContentPriceImgGarden {
+                            flex: 1;
+                            background-image: url(../assets/images/garden.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-bottom: 10px;
+                        }
+
+                        .rateAboutContentPriceImgHouse {
+                            flex: 1;
+                            background-image: url(../assets/images/house.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-bottom: 10px;
+                            background-position: center 100%;
                         }
 
                         .rateAboutContentPriceText {

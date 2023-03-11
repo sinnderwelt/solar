@@ -1,6 +1,18 @@
 .edgeFooter {
     height: 730px;
     background-image: url(../assets/images/footer.png);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 2;
+    }
 
     footer {
 
@@ -11,6 +23,7 @@
 
         .footerHeader {
             display: flex;
+            z-index: 3;
 
             .footerHeaderTitle {
                 flex: 1;
@@ -38,6 +51,7 @@
 
         .footerMain {
             display: flex;
+            z-index: 3;
 
             @include tablets {
                 flex-direction: column;
@@ -132,6 +146,7 @@
 
         .footerAbout {
             display: flex;
+            z-index: 3;
             
             @include tablets {
                 margin-top: 5px;
