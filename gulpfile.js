@@ -45,7 +45,7 @@ task('styles', ()=> {
       rem: 16,            // root element (html) font-size (default: 16)
       one: false           // whether convert 1px to rem (default: false)
     }))
-    .pipe(gulpif(env === 'prod', autoprefixer({
+    .pipe(gulpif(env === 'dev', autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     })))
