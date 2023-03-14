@@ -25,10 +25,12 @@
                         <span>заставит вас желать вернуться в прошлое</span>
                     </header>
                     <div class="headerButton">
-                        <div class="arrow-1">
-                            <div></div>
+                        <div class="headerButtonArrow">
+                            <div class="headerArrow"></div>
                         </div>
-                        <a href="/">открыть новые горизонты</a>
+                        <div>
+                            <a href="/">открыть новые горизонты</a>
+                        </div>
                     </div>
                     <div class="headerIcons">
                         <a href="/">
@@ -211,13 +213,19 @@
                     </div>
                     <div class="clientTariff">
                         <div class="clientTariffHouse">
-                            <div class="clientTariffHouseImg"></div>
+                            <div class="clientTariffHouseSlider">
+                                <div class="clientTariffHouseImg" id="sliderLine">
+                                    <div class="clientTariffHouseImgOne"></div>
+                                    <div class="clientTariffHouseImgTwo"></div>
+                                    <div class="clientTariffHouseImgThree"></div>
+                                </div>    
+                            </div>
                             <div class="clientTariffHouseArrow">
                                 <div class="clientTariffHouseArrowItem">
-                                    <a href="">стрелка</a>
+                                    <a href="" id="prevBtn">стрелка</a>
                                 </div>
                                 <div class="clientTariffHouseArrowItem">
-                                    <a href="">стрелка</a>
+                                    <a href="" id="nextBtn">стрелка</a>
                                 </div>
                             </div>
                         </div>

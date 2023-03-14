@@ -29,13 +29,51 @@
             .clientTariffHouse {
                 flex: 1;
 
-                .clientTariffHouseImg {
-                    background: url(../assets/images/villa.jpg) no-repeat center;
-                    background-size: cover;
-                    height: 370px;
+                .clientTariffHouseSlider {
 
-                    @include phones {
-                        height: 250px;
+                    width: 546px;
+                    overflow: hidden;
+
+                    .clientTariffHouseImg {
+
+                        display: flex;
+                        position: relative;
+                        right: 0;
+                        width: 1638px;
+                        transition: all ease 1s;
+    
+                        .clientTariffHouseImgOne {
+                            background: url(../assets/images/villa.jpg) no-repeat center;
+                            background-size: cover;
+                            width: 546px;
+                            height: 370px;
+        
+                            @include phones {
+                                height: 250px;
+                            }
+                        }
+        
+                        .clientTariffHouseImgTwo {
+                            background: url(../assets/images/villa2.jpg) no-repeat center;
+                            background-size: cover;
+                            width: 546px;
+                            height: 370px;
+        
+                            @include phones {
+                                height: 250px;
+                            }
+                        }
+        
+                        .clientTariffHouseImgThree {
+                            background: url(../assets/images/villa3.jpg) no-repeat center;
+                            background-size: cover;
+                            width: 546px;
+                            height: 370px;
+        
+                            @include phones {
+                                height: 250px;
+                            }
+                        }
                     }
                 }
 

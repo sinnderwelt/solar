@@ -4,60 +4,135 @@ $black: #303030;
 $green: #A9A32A;
 
 // @mixin 
-    @mixin arrow-1 {
-        cursor: pointer;
+
+    @mixin arrowLeft {
+
         position: relative;
         width: 40px;
         height: 50px;
         display: flex;
+
+        div {
+            @include arrowDiv;
+
+            &::after {
+                @include arrowDivAfterLeft;
+            }
+
+            &::before {
+                @include arrowDivBeforeLeft;
+            }
+        }
+
+    }
+    
+    @mixin arrowRight {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        display: flex;
+
+        div {
+            @include arrowDiv;
+
+            &::after {
+                @include arrowDivAfterRight;
+            }
+
+            &::before {
+                @include arrowDivBeforeRight;
+            }
+        }
+    }
+
+    @mixin arrowRightCircle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+
+        &::after {
+            @include arrowRightCircleBody;
+        }
+
+        div {
+            @include arrowDiv;
+
+            &::after {
+                @include arrowDivAfterRight;
+            }
+
+            &::before {
+                @include arrowDivBeforeRight;
+            }
+        }
     }
 
     @mixin arrowDiv {
-        @include arrow-1;
-        
-        div {
-            position: relative;
-            top: 20px;
-            width: 90px;
-            height: 2px;
-            background-color: $white;
-            box-shadow: 0 3px 5px $white(0, 0, 0, .2);
-            left:0;
-            display: block;
-            border-radius: 5px;
-        }
-
-    }
-    @mixin arrowNextAfter {
-        @include arrowDiv;
-
-        div::after {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 2px;
-            top: -5px;
-            right: -3px;
-            background-color: $white;
-            transform: rotate(45deg);
-            border-radius: 5px;
-        }
-
+        width: 40px;
+        height: 2px;
+        background-color: $white;
+        box-shadow: 0 3px 5px $white(0, 0, 0, .2);
+        display: block;
+        border-radius: 5px;
     }
 
-    @mixin arrowNextBefore {
-        @include arrowNextAfter;
+    @mixin arrowDivAfterRight {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        top: -5px;
+        right: -4px;
+        background-color: $white;
+        transform: rotate(45deg);
+        border-radius: 5px;
+    }
 
-        div::before {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 2px;
-            top: 5px;
-            right: -3px;
-            background-color: $white;
-            box-shadow: 0 3px 5px $white(0, 0, 0, .2);
-            transform: rotate(-45deg);
-            border-radius: 5px;
-        }
+    @mixin arrowDivAfterLeft {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        top: -5px;
+        right: 27px;
+        background-color: $white;
+        transform: rotate(-45deg);
+        border-radius: 5px;
+    }
+
+    @mixin arrowDivBeforeRight {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        top: 5px;
+        right: -4px;
+        background-color: $white;
+        box-shadow: 0 3px 5px $white(0, 0, 0, .2);
+        transform: rotate(-45deg);
+        border-radius: 5px;
+    }
+
+    @mixin arrowDivBeforeLeft {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        top: 5px;
+        right: 27px;
+        background-color: $white;
+        box-shadow: 0 3px 5px $white(0, 0, 0, .2);
+        transform: rotate(45deg);
+        border-radius: 5px;
+    }
+
+    @mixin arrowRightCircleBody {
+        position: absolute;
+        content: "";
+        height: 70px;
+        width: 70px;
+        background-color: inherit;
+        border: 1px solid $white;
+        border-radius: 50%;
     }
